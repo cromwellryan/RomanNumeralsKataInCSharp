@@ -17,7 +17,11 @@ namespace RomanNumeralsKata
         [TestCase(4, "IV")]
         [TestCase(5, "V")]
         [TestCase(6, "VI")]
-        public void ShouldConvertSingleDigits(int number, string romanNumeral)
+        [TestCase(7, "VII")]
+        [TestCase(8, "VIII")]
+        [TestCase(9, "IX")]
+        [TestCase(10, "X")]
+        public void ConvertsSingleDigits(int number, string romanNumeral)
         {
             ConvertToRoman(number).Should().Equal(romanNumeral);
         }
@@ -32,7 +36,10 @@ namespace RomanNumeralsKata
                                      {4, "IV"},
                                      {5, "V"},
                                      {6, "VI"},
-
+                                     {7, "VII"},
+                                     {8, "VIII"},
+                                     {9, "IX"},
+                                     {10, "X"},
                                  };
 
             return converters[number];
